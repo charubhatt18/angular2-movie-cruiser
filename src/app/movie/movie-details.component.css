@@ -1,4 +1,31 @@
-img{
-	height: 500px;
+img {
+	height: 400px;
 	width:300px;
+}
+
+.MovieDetail {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#movieCard {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#noMov {
+	color: red;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+	font-family: lato;
+}
+
+#searchRes {
+	color: green;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 40px;
+	font-family: lato;
+
 }

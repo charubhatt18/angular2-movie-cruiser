@@ -1,2 +1,9 @@
 /* importing angular-material prebuilt theme */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+#pageHeading {
+	text-align: center;
+	color: #FFA000;
+
+}
+

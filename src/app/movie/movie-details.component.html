@@ -1,16 +1,26 @@
+<search-bar></search-bar>
 
-<md-card *ngFor="let movie of Movies"> <!-- getting movie one-by-one and displaying it -->
-	<md-card-header>
-		<md-card-title>{{movie.Title}}</md-card-title> <!-- title of the movie -->
-		<md-card-subtitle>{{movie.imdbID}}</md-card-subtitle> <!-- subtitle of the movie -->
-		<md-card-subtitle>{{movie.Year}}</md-card-subtitle> <!-- year of the movie -->
-	</md-card-header>
-	<img md-card-image src="{{movie.Poster}}"> <!-- image of the movie -->
-	<md-card-content>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia, tempore ab deserunt eos rerum, dolores quo libero, vitae natus omnis explicabo, minima dolorem distinctio nobis deleniti nostrum voluptate illum?</p>
-	</md-card-content>
-	<md-card-actions>
-		<button md-button>Update</button>
-		<button md-button>Save</button>
-	</md-card-actions>
-</md-card>
+<ng-container *ngIf="Movies?.length == 0; else mov">
+	<p id="noMov">Sorry, No Movies Found...</p>
+</ng-container>
+
+<ng-template #mov>
+	<p id="searchRes">Searched Results...</p>
+	<div class="row">
+		<md-card *ngFor="let movie of Movies" class="col-sm-4" id="movieCard" > <!-- getting movie one-by-one and displaying it -->
+			<md-card-header class="MovieDetail">
+				<md-card-title>{{movie.Title}}</md-card-title> <!-- title of the movie -->
+				<md-card-subtitle>{{movie.imdbID}}</md-card-subtitle> <!-- subtitle of the movie -->
+				<md-card-subtitle>{{movie.Year}}</md-card-subtitle> <!-- year of the movie -->
+			</md-card-header>
+			<img md-card-image src="{{movie.Poster}}" class="MovieDetail"> <!-- image of the movie -->
+			<md-card-content class="MovieDetail">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia, tempore ab deserunt eos rerum, dolores quo libero, vitae natus omnis explicabo, minima dolorem distinctio nobis deleniti nostrum voluptate illum?</p>
+			</md-card-content>
+			<md-card-actions class="MovieDetail">
+				<button md-button>Update</button>
+				<button md-button>Save</button>
+			</md-card-actions>
+		</md-card>
+	</div>
+</ng-template>
