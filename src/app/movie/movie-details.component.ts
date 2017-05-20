@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/switchMap';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
+/*import { Location } from '@angular/common';*/
 
 import { Movie } from '../model/movie';
 import { MovieService } from './movie.service';
@@ -20,7 +20,7 @@ export class MovieDetailsComponent implements OnInit {
 	constructor(
     	private movieService: MovieService, 
     	private route: ActivatedRoute,
-    	private location: Location
+    	/*private location: Location*/
   ) {}
 
 	ngOnInit(): void {
